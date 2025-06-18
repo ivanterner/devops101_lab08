@@ -13,14 +13,13 @@ def incr_hit_count() -> int:
 
 
 @app.route('/metrics') 
-
-def metrics(): 
-    metrics = f''' 
-    # HELP view_count Flask-Redis-App visit counter 
-    # TYPE view_count counter 
-    view_count{{service="Flask-Redis-App"}} {get_hit_count()} 
-    ''' # sic double quotes in label 
-    response = make_response(metrics, 200) 
+def metrics():
+    metrics = f'''
+# HELP view_count Flask-Redis-App visit counter
+# TYPE view_count counter
+view_count{{service="Flask-Redis-App"}} {get_hit_count()}
+''' # sic double quotes in label
+    response = make_response(metrics, 200)
     response.mimetype = "text/plain" 
     return response 
 

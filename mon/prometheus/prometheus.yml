@@ -21,22 +21,21 @@
     - targets:
       - localhost:9090
 
-  - job_name: view_total 
-    metrics_path: /metrics 
-    scrape_interval: 15s 
-    scrape_timeout: 10s 
-    static_configs: 
-    - targets: [ '192.168.100.10:8000' ] 
-      labels: 
-        service: 'Flask-Redis-Appi'
+  - job_name: 'view_total'
+    metrics_path: /metrics
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    static_configs:
+      - targets: ['192.168.100.10:8000']
+        labels:
+          service: 'Flask-Redis-App'
 
   - job_name: blackbox-http 
     metrics_path: /probe 
     params: 
       module: [http_2xx] 
     static_configs: 
-      - targets: 
-        - http://192.168.100.10:8000 # Flask 
+      - targets:
         - https://reg.ru 
         - https://student.psu.ru 
     relabel_configs: 
