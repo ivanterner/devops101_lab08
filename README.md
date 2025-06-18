@@ -97,7 +97,7 @@ Hello World! I have been seen 3 times.
 
 
 
-.(flask.png)
+![README](flask.png)
 
 
 Структура мониторинга
