@@ -197,8 +197,8 @@ prometheus   prom/prometheus   "/bin/prometheus --c…"   prometheus   7 seconds
 
 Проверка мониторинга Prometheus+Grafana
 Смотрим метрику самого Prometheus
-![[prome.png]]
 
+![README](prome.png)
 Добавляем мониторинг нашего Flask-приложения
 compose.yml для Prometheus+Grafana+BlackBox
 ```yaml
@@ -289,8 +289,8 @@ docker compose up -d
 ```
 
 Проверяем через Grafana заодно создаем дашборд 13659
-![[dash.png]]
 
+![README](dash.png)
 
 
 Доп. задание :
@@ -410,4 +410,4 @@ docker exec prometheus killall prometheus
 ```
 
 Добавляем панель на дашборд в Grafana
-![[view_count.png]]
+![README](view_count.png)
