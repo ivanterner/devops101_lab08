@@ -95,9 +95,9 @@ curl 127.0.0.1:8000
 Hello World! I have been seen 3 times.
 ```
 
-![[flask.png]]
 
 
+.(flask.png)
 
 
 Структура мониторинга
